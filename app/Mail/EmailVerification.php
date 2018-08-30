@@ -33,6 +33,7 @@ class EmailVerification extends Mailable
     {   
         return $this->markdown('email.email')->with([
             'url' => url('/verifyemail/'.$this->user->email_token),
+            'name' => $this->user->name,
         ]);
     }
 

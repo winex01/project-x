@@ -1,12 +1,15 @@
 @component('mail::message')
-# Welcome Aboard
+# Welcome aboard {{ ucwords(strtolower($name)) }}!
 
-Your order has been shipped!
+Thank you so much for joining Git-Codes! To finish signing up, you just need to confirm that we got your email right.
 
 @component('mail::button', ['url' => $url])
-Verify Account	
+Confirm Email
 @endcomponent
 
-Thanks,<br>
-{{ config('app.name') }}
+
+Copy and paste this link if button above not working: {{ $url }}
+
+{{-- Thanks,<br> --}}
+{{-- {{ config('app.name') }} --}}
 @endcomponent
