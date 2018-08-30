@@ -1,12 +1,12 @@
 @component('mail::message')
-# Order Shipped
+# Welcome Aboard
 
 Your order has been shipped!
 
 @component('mail::button', ['url' => $url])
-View Order
+Verify Account	
 @endcomponent
 
 Thanks,<br>
-{{-- {{ config('app.name') }} --}}
+{{ config('app.name') }}
 @endcomponent
