@@ -8,7 +8,7 @@ Confirm Email
 @endcomponent
 
 
-Copy and paste this link if button above not working: {{ $url }}
+Copy and paste this link to the browser if button above not working: {{ $url }}
 
 {{-- Thanks,<br> --}}
 {{-- {{ config('app.name') }} --}}
