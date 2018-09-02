@@ -1,58 +1,121 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.master')
+@section('content')
+	@include('layouts.search')
 
-        <title>Laravel</title>
+	 <div class="row">
+        <div class="col-lg-3 col-md-3">
+                
+              <center>
+                <img class="img-responsive img-thumbnail" src="{{ asset('images/projects/1.png') }}">
+                <img class="img-responsive img-thumbnail" src="{{ asset('images/projects/2.png') }}">
+              </center>
 
-      <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-      
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ route('dashboard') }}">{{ __('Dashboard') }}</a>
-                    @else
-                        <a href="{{ route('login') }}">{{ __('Login') }}</a>
-                        <a href="{{ route('register') }}">{{ __('Register') }}</a>
-                    @endauth
-                </div>
-            @endif
+              <div align="center">
+                <span class="label label-primary" data-toggle="tooltip" title=""><i class="fa fa-eye"></i> 003</span>
+                <span class="label label-success" data-toggle="tooltip" title=""><i class="fa fa-bookmark-o"></i> 001</span>
+                <span class="label label-danger" data-toggle="tooltip" title=""><i class="fa fa-cloud-download"></i> 002</span>
+              </div>
+        </div>
+        
+        <div class="col-lg-9 col-md-9">
+         <h4><a href="http://ebook.test/book/new-book/view" class="text-info">Inventory System PHP <sub class="text-success">14 hours ago</sub></a></h4>
 
-           
+          <p>
+            2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during th<a href="#modal-show-description" data-toggle="modal"> (...)</a>            
+          </p>
 
-           <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
+          <p>
+            <a href="http://ebook.test/book/new-book/view" class="btn btn-primary btn-xs">View More
+            <i class="fa fa-chevron-right"></i>
+            </a>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+            <a href="http://ebook.test/book/bookmark/new-book/bookmark" class="btn btn-success btn-xs">Bookmark
+            <i class="fa fa-bookmark-o"></i>
+            </a>
+
+            <a href="http://ebook.test/book/download/new-book/download" class="btn btn-danger btn-xs">Download
+            <i class="fa fa-cloud-download"></i>
+            </a>
+          </p>
+
+          <strong>#Tags:</strong>
+          <a href="#">Arduino,</a>
+          <a href="#">Web,</a>
+          <a href="#">Management,</a>
+          <a href="#">SQL,</a>
+          <a href="#">Visual Studio,</a>
+          <a href="#">Windows Form,</a>
+          <a href="#">Management,</a>
+          <a href="#">SQL,</a>
+          <a href="#">Camtasia Studio,</a>
+          <a href="#">Arduino Form</a>
+        </div>
     </div>
-  </div>
-</div>
+    <hr />
 
 
 
-        <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
-    </body>
-</html>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-3">
+                              <center>
+                  <img class="img-responsive img-thumbnail" src="{{ asset('images/projects/3.png') }}">
+                  <img class="img-responsive img-thumbnail" src="{{ asset('images/projects/4.png') }}">
+                </center>
+                            <div align="center">
+                <span class="label label-primary" data-toggle="tooltip" title=""><i class="fa fa-eye"></i> 003</span>
+                <span class="label label-success" data-toggle="tooltip" title=""><i class="fa fa-bookmark-o"></i> 001</span>
+                <span class="label label-danger" data-toggle="tooltip" title=""><i class="fa fa-cloud-download"></i> 002</span>
+              </div>
+        </div>
+        
+        <div class="col-lg-9 col-md-9">
+         <h4><a href="http://ebook.test/book/new-book/view" class="text-info">Laundry App <sub class="text-success">14 hours ago</sub></a></h4>
+
+          <p>
+            2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during th<a href="#modal-show-description" data-toggle="modal"> (...)</a>            
+          </p>
+
+          <p>
+            <a href="http://ebook.test/book/new-book/view" class="btn btn-primary btn-xs">View More
+            <i class="fa fa-chevron-right"></i>
+            </a>
+
+            <a href="http://ebook.test/book/bookmark/new-book/bookmark" class="btn btn-success btn-xs">Bookmark
+            <i class="fa fa-bookmark-o"></i>
+            </a>
+
+            <a href="http://ebook.test/book/download/new-book/download" class="btn btn-danger btn-xs">Download
+            <i class="fa fa-cloud-download"></i>
+            </a>
+          </p>
+
+          <strong>#Tags:</strong>
+          <a href="#">Arduino,</a>
+          <a href="#">Web,</a>
+          <a href="#">Management,</a>
+          <a href="#">SQL,</a>
+          <a href="#">Visual Studio,</a>
+          <a href="#">Windows Form,</a>
+          <a href="#">Management,</a>
+          <a href="#">SQL,</a>
+          <a href="#">Camtasia Studio,</a>
+          <a href="#">Arduino Form</a>
+        </div>
+    </div>
+    <hr />
+
+
+    <center>
+      <ul class="pagination pagination-lg">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+    </center>
+
+@endsection
