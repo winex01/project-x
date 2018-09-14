@@ -68,7 +68,7 @@ desired effect
           <ul class="nav navbar-nav">
               @auth
                   {{-- // The user is authenticated... --}}
-                  <li> <a href="http://ebook.test/home"> <i class="fa fa-user"></i> Winnie </a> </li>
+                  <li> <a href="{{ route('dashboard') }}"> <i class="fa fa-user"></i> {{ Auth::user()->name }} </a> </li>
               @endauth
 
               @guest
