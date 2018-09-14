@@ -9,7 +9,7 @@
                 @csrf
 
                 <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
-                    <label for="name" class="control-label col-md-4">{{ __('Name') }}</label>
+                    <label for="name" class="control-label col-md-4">{{ __('Display Name') }}</label>
 
                     <div class="col-md-6">
                         <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' has-error' : '' }}" name="name" value="{{ old('name') }}" autofocus required>
