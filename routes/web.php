@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/test', function () {
-    return view('test');
-});
-
 Auth::routes();
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
