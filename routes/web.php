@@ -17,4 +17,6 @@ Route::get('/', 'HomeController@index')->name('home');
 Auth::routes();
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
+
+// if user is authenticated
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
