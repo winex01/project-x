@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// this is the landing page
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
