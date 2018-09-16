@@ -19,4 +19,4 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 
 // if user is authenticated
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/dashboard', 'User\DashboardController@index')->name('dashboard');
