@@ -8,7 +8,7 @@ Auth::routes();
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 
-#route for authenticated user
+#authenticated route
 Route::middleware(['auth'])->group(function () {
 	// user modules
 	Route::namespace('User')->group(function () {
