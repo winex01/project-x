@@ -1,22 +1,17 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-// this is the landing page
+#default route
 Route::get('/', 'HomeController@index')->name('home');
 
+#authentication route
 Auth::routes();
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 
-// if user is authenticated
-Route::get('/dashboard', 'User\DashboardController@index')->name('dashboard');
+#route for authenticated user
+Route::middleware(['auth'])->group(function () {
+	// user modules
+	Route::namespace('User')->group(function () {
+		Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+	});
+});
